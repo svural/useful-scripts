@@ -57,7 +57,7 @@ def makeParams(file_ids):
 def gdcAPI(file_ids, manifest):
 	output = manifest + '.map2submitterID'
 	outputh = open(output, 'w')
-	files_endpt = "https://gdc-api.nci.nih.gov/files"
+	files_endpt = "https://api.gdc.cancer.gov/files"
 	params = makeParams(file_ids)
 	response = requests.post(files_endpt, json = params)
 	outputh.write(response.text)
